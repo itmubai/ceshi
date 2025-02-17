@@ -1,0 +1,27 @@
+/* style.css */
+/* 新增烟花特效样式 */
+.firework {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: fireworks 1s ease-out forwards;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+@keyframes fireworks {
+    0% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% { 
+        transform: scale(3);
+        opacity: 0;
+        filter: blur(2px);
+    }
+}
+
+/* 其他原有样式保持不变 */
+body { ... }
+.container { ... }
+/* 保持原有其他样式不变 */
